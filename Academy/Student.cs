@@ -7,7 +7,12 @@ using System.Threading.Tasks;
 namespace Academy
 {
 	class Student: Human
+
 	{
+		static readonly int SPECIALITY_WIDTH = 26;
+		static readonly int GROUP_WIDTH = 8;
+		static readonly int RATING_WIDTH = 8;
+		static readonly int ATTENDANCE_WIDTH = 8;
 		public string Speciality { get; set; }
 		public string Group { get; set; }
 		public double Rating { get; set; }
@@ -36,7 +41,7 @@ namespace Academy
 		}
 		public override string ToString()
 		{
-			return base.ToString()+$":\t{Speciality} {Group} {Attendance}";
+			return base.ToString()+$":{Speciality.PadRight(SPECIALITY_WIDTH)} {Group.PadRight(GROUP_WIDTH)} {Rating.ToString().PadRight(RATING_WIDTH)} {Attendance.ToString().PadRight(ATTENDANCE_WIDTH)}";
 		}
 	}
 }
