@@ -1,4 +1,7 @@
-﻿using System;
+﻿//#define INHERITANCE_CHECK
+//#define SAVE_CHECK
+#define LOAD_CHECK
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +15,7 @@ namespace Academy
 	{
 		static void Main(string[] args)
 		{
+#if INHERITANCE_CHECK
 			Human humah = new Human("Montana", "Antonio", 25);
 			humah.Print();
 			Console.WriteLine(humah);
@@ -24,10 +28,12 @@ namespace Academy
 			teacher.Print();
 			Console.WriteLine(teacher);
 			Graduate graduate = new Graduate("Schrader", "Hank", 40, "Criminalistic", "OBN", 70, 75, "How to catch Heisenberg");
-	
+
 			graduate.Print();
 			Console.WriteLine(graduate);
+#endif
 
+#if SAVE_CHECK
 			Human[] group = new Human[]
 			{
 				new Human("Montana", "Antonio", 25),
@@ -38,8 +44,13 @@ namespace Academy
 				new Teacher("Diaz", "Ricardo", 50, "Weapons distribution", 20)
 			};
 			Streamer.Print(group);
-			Streamer.Save(group, "group.txt");
-			
+			Streamer.Save(group, "group.csv");
+#endif
+#if LOAD_CHECK
+			Human[] group = Streamer.Load("group.csv");
+			Streamer.Print(group);
+#endif
+
 			////заппись в файл 
 			//StreamWriter sw = File.AppendText("Group.txt");
 			//foreach (Human person in group)
@@ -48,7 +59,7 @@ namespace Academy
 			//	sw.WriteLine();
 			//}
 			//sw.Close();
-		
+
 			////чтоение из файла 
 
 			//StreamReader sr = new StreamReader("Group.txt");
@@ -61,6 +72,6 @@ namespace Academy
 			//Process.Start("notepad", "Group.txt");
 
 		}
-		
+
 	}
 }
