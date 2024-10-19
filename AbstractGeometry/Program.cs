@@ -25,9 +25,9 @@ namespace AbstractGeometry
 			//Console.WriteLine("AbstractGeometry");
 			Rectangle rectangle = new Rectangle(100, 50, 500, 200, 3, System.Drawing.Color.Red);
 			rectangle.Info(e);
-			Square square = new Square(80,650,50,5,Color.Red);
+			Square square = new Square(75,512,16,1,Color.DarkBlue);
 			square.Info(e);
-			Circle circle = new Circle(50,200, 200,3,Color.Red);
+			Circle circle = new Circle(55,600, 95,3,Color.Red);
 			circle.Info(e);
 
 		}

@@ -30,6 +30,12 @@ namespace AbstractGeometry
 			Pen pen = new Pen(Color, LineWidth);
 			e.Graphics.DrawEllipse(pen, StartX, StartY, (int)Radius * 2, (int)Radius * 2);
 		}
-		
+		public override void Info(PaintEventArgs e)
+		{
+			Console.WriteLine(this.GetType());
+			Console.WriteLine($"Радиус круга: {Radius}");
+			base.Info(e);
+		}
+
 	}
 }
