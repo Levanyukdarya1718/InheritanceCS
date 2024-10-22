@@ -29,7 +29,7 @@ namespace AbstractGeometry
 			square.Info(e);
 			Circle circle = new Circle(55,600, 95,3,Color.Red);
 			circle.Info(e);
-
+			
 		}
 		[DllImport("kernel32.dll")]
 		public static extern IntPtr GetConsoleWindow();
