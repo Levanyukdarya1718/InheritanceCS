@@ -10,8 +10,8 @@ namespace AbstractGeometry
 {
 	internal class RightTriangle : IsoscalesTriangle
 	{
-		public RightTriangle(double legA, double legB, int startX, int startY, int lineWidth, Color color)
-			: base(legA, legB, startX, startY, lineWidth, color) { }
+		public RightTriangle(double riangleBase, double triangleBase, int startX, int startY, int lineWidth, Color color)
+			: base(riangleBase, triangleBase, startX, startY, lineWidth, color) { }
 
 		public override double GetHeight() => Math.Min(TriangleBase, TriangleSide);
 
