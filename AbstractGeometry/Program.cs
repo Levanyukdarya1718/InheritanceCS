@@ -25,15 +25,17 @@ namespace AbstractGeometry
 			//Console.WriteLine("AbstractGeometry");
 			Rectangle rectangle = new Rectangle(100, 50, 500, 200, 3, System.Drawing.Color.Red);
 			rectangle.Info(e);
-			Square square = new Square(75,512,16,1,Color.DarkBlue);
+			Square square = new Square(75,512,16,1,Color.Red);
 			square.Info(e);
-			Circle circle = new Circle(55,600, 95,3,Color.Red);
+			Circle circle = new Circle(70,600, 95,3,Color.Red);
 			circle.Info(e);
-			IsoscalesTriangle i_triangle = new IsoscalesTriangle(50, 100, 800, 50, 2, Color.Green);
+			IsoscalesTriangle i_triangle = new IsoscalesTriangle(50, 100, 800, 50, 2, Color.Red);
 			i_triangle.Info(e);
 			EquilateralTriangle e_triangle=
-			new EquilateralTriangle(150, 500,200,5,Color.GreenYellow); 
+			new EquilateralTriangle(200,500,250,5,Color.Red); 
 			e_triangle.Info(e);
+			RightTriangle r_triangle = new RightTriangle(100, 150, 745, 360, 3, Color.Red);
+			r_triangle.Info(e);
 		}
 		[DllImport("kernel32.dll")]
 		public static extern IntPtr GetConsoleWindow();
